@@ -5,7 +5,8 @@ public class Arrays {
         System.out.println("Welcome to awesome arrays!");
         new Arrays();
     }
-    public Arrays(){
+
+    public Arrays() {
         nums = new int[10];
         nums[9] = 11;
         //todo: add all nums to all buckets in labels 0-8
@@ -18,7 +19,7 @@ public class Arrays {
         nums[2] = 4;
         nums[1] = 3;
         nums[0] = 2;
-        for (int x = 0; x < nums.length; x++){
+        for (int x = 0; x < nums.length; x++) {
             nums[x] = (int) (Math.random() * 100) + 1;
         }
         //todo: make method called displayArray that prints all of the number in the array and only use one sout
@@ -26,18 +27,50 @@ public class Arrays {
         System.out.println(nums[9]);
         displayArray();
         sumArray();
+        averageNum();
+        maxNum();
+        minNum();
     }
-    public void displayArray(){
+
+    public void displayArray() {
         for (int x = 0; x < nums.length; x++) {
             System.out.println(x + ": " + nums[x]);
         }
     }
-    public void sumArray(){
+
+    public void sumArray() {
         int total = 0;
-        for (int x = 0; x < nums.length; x++){
+        for (int x = 0; x < nums.length; x++) {
             total = total + nums[x];
         }
         System.out.println(total);
+    }
+
+    public void averageNum() {
+    double total = 0;
+    for (int a = 0; a < nums.length; a++){
+        System.out.println(total/nums.length);
+    }
+    }
+
+    public void maxNum() {
+        int max = nums[0];
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] > max) {
+                max = nums[i];
+            }
+        }
+        System.out.println(max);
+    }
+
+    public void minNum() {
+        int max = nums[0];
+        for (int z = 1; z < nums.length; z++) {
+            if (nums[z] > max) {
+                max = nums[z];
+            }
+        }
+        System.out.println(max);
     }
 }
 //todo: use for loops to fill the array with random numbers 1 - 100

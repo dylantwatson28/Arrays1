@@ -38,11 +38,13 @@ public class Arrays {
         Astronaut a1 = new Astronaut();
         a1.eyes = 40;
         a1.printInfo();
-        astros[4] = new Astronaut();
 
-        astros[4].eyes = 20;
-        astros[4].name = "Gerald";
-        astros[4].printInfo();
+        for(int x = 0; x< astros.length;x++) {
+            astros[x] = new Astronaut();
+            astros[x].eyes = (int) (Math.random() * 100) + 1;
+            astros[x].name = "Astro" + x;
+            astros[x].printInfo();
+        }
     }
 
     public void displayArray() {
